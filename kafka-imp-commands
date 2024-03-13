@@ -286,7 +286,7 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic Email-P
 
 RUN Kafka::
 
-zookeeper-server-start.sh config/zookeeper.properties
+./bin/zookeeper-server-start.sh config/zookeeper.properties
 
 
 
