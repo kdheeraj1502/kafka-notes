@@ -283,6 +283,9 @@ echo dump | nc localhost 2181 | grep brokers
 
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic Email-PN-Queue
 
+RUN Zookeeper
+
+./zkServer.sh start
 
 RUN Kafka::
 
