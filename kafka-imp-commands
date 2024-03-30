@@ -294,5 +294,16 @@ RUN Kafka::
 ./bin/zookeeper-server-start.sh config/zookeeper.properties // I dont know what this command does
 
 
+Kafka CLI Commands: Delete a Topic
 
+You can delete a topic from the Kafka broker 
+
+
+$ bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic topic-name
+
+if there is any retention policy  for topic ,  first need to delete it before executing above command. 
+To delete the retention policy, below is the following command:
+
+
+$ bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic topic-name --delete-config retention.ms
 
